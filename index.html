@@ -111,17 +111,9 @@ body {
   </p>
 
   <!-- Buy Button -->
-  <a id="buyButton" class="mt-8 inline-block px-6 py-3 rounded-lg shadow hover:scale-105 transition transform bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm" target="_blank">
+  <a id="buyButton" href="https://pump.fun/coin/3fHjxmGeSggFzVZZMfm9vEifjHREdHDTST8Fjh6vpump" target="_blank" class="mt-8 inline-block px-6 py-3 rounded-lg shadow hover:scale-105 transition transform bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm">
     Buy Desert Coin
   </a>
-
-  <!-- Coin Graph Section -->
-  <div class="mt-10 w-full max-w-xl">
-    <h2 class="text-xs mb-2 pixel-shadow" style="color: var(--sand)">DSRT Price Chart</h2>
-    <div class="tradingview-widget-container">
-      <iframe id="chartFrame" style="width:100%;height:300px;" frameborder="0"></iframe>
-    </div>
-  </div>
 
   <!-- Footer -->
   <div class="mt-6 text-xs text-gray-500 max-w-md">
@@ -130,19 +122,7 @@ body {
 </div>
 
 <script>
-  // ---------- DYNAMIC SETTINGS ----------
-  const BUY_LINK = "https://pump.fun/desert-coin"; // <-- Change this to your buy page
-  const CHART_SYMBOL = "SOLDSRT"; // <-- Change this to your TradingView symbol/pair
-
-  // Update buy button link
-  const buyButton = document.getElementById('buyButton');
-  buyButton.href = BUY_LINK;
-
-  // Update TradingView chart
-  const chartFrame = document.getElementById('chartFrame');
-  chartFrame.src = `https://s.tradingview.com/widgetembed/?symbol=${CHART_SYMBOL}&interval=60&hidesidetoolbar=1&symboledit=1`;
-
-  // ---------- PARALLAX ----------
+  // Parallax effect on mouse movement
   const dune1 = document.getElementById('dune1');
   const dune2 = document.getElementById('dune2');
   const dune3 = document.getElementById('dune3');
@@ -159,4 +139,5 @@ body {
 
 </body>
 </html>
+
 
