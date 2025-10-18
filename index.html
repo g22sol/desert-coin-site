@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desert Coin — When the market dries up, the Desert thrives.</title>
+  <meta name="description" content="Desert Coin (DSRT) — a symbol for bear-market resilience." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sand: #F4E3C1;
+      --dune: #C19A6B;
+      --sun: #E47A2E;
+      --bg: #1a1a1a;
+    }
+    body {
+      font-family: 'Press Start 2P', monospace;
+      background: var(--bg);
+      color: #f0e7db;
+      margin: 0;
+      overflow: hidden;
+    }
+    .pixel-shadow {
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    }
+    .logo-placeholder {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, var(--sun), var(--dune));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      z-index: 2;
+      position: relative;
+    }
+    .dune {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(to top, #b97c50 0%, #1a1a1a 70%);
+      border-radius: 50%;
+      animation: drift 20s linear infinite;
+      opacity: 0.2;
+      z-index: 1;
+    }
+    @keyframes drift {
+      0% { transform: translateX(-25%) translateY(0); }
+      50% { transform: translateX(25%) translateY(-20px); }
+      100% { transform: translateX(-25%) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="dune"></div>
+  <div class="min-h-screen flex flex-col items-center justify-center text-center p-6 relative z-10">
+    <div class="logo-placeholder mb-6">DSRT</div>
+    <h1 class="text-2xl sm:text-4xl pixel-shadow" style="color: var(--sand)">Desert Coin (DSRT)</h1>
+    <p class="mt-4 text-sm text-gray-300 max-w-xl">
+      When the market dries up, the Desert thrives.<br>
+      Desert Coin is a symbol of strength in bear markets — made for those who keep building through the drought.
+    </p>
+
+    <a id="buyButton" href="https://pump.fun" target="_blank" class="mt-8 inline-block px-6 py-3 rounded-lg shadow hover:scale-105 transition transform bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm">
+      Buy on Pump.fun
+    </a>
+
+    <!-- Coin Graph Section -->
+    <div class="mt-10 w-full max-w-xl">
+      <h2 class="text-xs mb-2 pixel-shadow" style="color: var(--sand)">DSRT Price Chart</h2>
+      <div class="tradingview-widget-container">
+        <iframe src="https://s.tradingview.com/widgetembed/?symbol=SOLDSRT&interval=60&hidesidetoolbar=1&symboledit=1" style="width:100%;height:300px;" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <div class="mt-6 text-xs text-gray-500 max-w-md">
+      Stay dry. Stay strong. Desert never dies.
+    </div>
+  </div>
+</body>
+</html>
